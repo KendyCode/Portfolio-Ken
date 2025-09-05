@@ -1,37 +1,36 @@
 Title: Parcours scolaire
 
-# Présentation de mon parcours scolaire
+> **<u>FICHE PERSONNELLE :</u>**
+>
+> <u>**Parcours académique :**</u>  
+>
+> - **Baccalauréat Général** – spécialités **Mathématiques** et **NSI**  
+> - **Licence Mathématiques & Informatique** (abandonnée car trop théorique)  
+> - **BTS SIO (Services Informatiques aux Organisations)** – actuellement en **2ᵉ année**  
 
-Après un bac **STI2D** spécialité **SIN** (**S**ystèmes d'**I**nformations & **N**umérique) j'avais la volonté de poursuivre dans le domaine de l'informatique. Après m'être renseigné, j'avais recensé les poursuite d'études suivantes dans le domaine de l'informatique :
+---
 
+## Présentation
 
+Après un **bac général** orienté sur les sciences du numérique et les mathématiques, j’ai poursuivi en **licence Mathématiques et Informatique**.  
+Cependant, l’approche très théorique de la licence ne correspondait pas à mes attentes : je recherchais davantage de **pratique en informatique**.  
 
-**1. BTS SIO** (**S**ervices **I**nformatiques aux **O**rganisations)
+J’ai donc décidé de me réorienter vers un **BTS SIO**, formation plus concrète, tournée vers le **développement**, l’**administration système/réseau**, et la **gestion de projets informatiques**.  
 
-- **<u>Options :</u>**
-    - **SISR** (**S**olutions d’**I**nfrastructure, **S**ystèmes et **R**éseaux) → administration réseaux, cybersécurité, cloud, virtualisation.
-    - **SLAM** (**S**olutions **L**ogicielles et **A**pplications **M**étiers) → développement d’applications, web, bases de données.
+---
 
+## Compétences acquises
 
-- **<u>Durée :</u>** 2 ans.
-- **<u>Débouchés :</u>** emploi direct (technicien support, admin systèmes/réseaux, développeur junior) ou poursuite d’études (Bachelor, BUT, Licence).
+- **Mathématiques** : logique, algorithmique, raisonnement formel.  
+- **Programmation** : Python, Java, PHP, SQL.  
+- **Bases de données** : conception, gestion, requêtes SQL.  
+- **Développement web** : HTML, CSS, JavaScript.  
+- **Gestion de projet** : travail en équipe, documentation, méthodologie agile.  
 
+---
 
-**2. BTS CIEL** (**C**ybersécurité, **I**nformatique et réseaux, **É**lectronique) : Nouvelle filière (remplace une partie du **BTS SN**).
+## Objectifs
 
-Orienté systèmes numériques, réseaux, électronique et cybersécurité.
-
-- **<u>Débouchés :</u>** technicien réseaux, support, sécurité. Possible poursuite en Bachelor cybersécurité ou BUT.
-
-
-**3. BUT Informatique** (ex-DUT) :
-
-Formation en 3 ans (mais on peut sortir après 2 ans avec un DUT).
-
-- **<u>Spécialités :</u>** développement, data, systèmes et réseaux, gestion de projets.
-- **<u>Points forts :</u>** pédagogie par projets, bonne réputation auprès des entreprises.
-- **<u>Débouchés :</u>** bac +3 direct, insertion professionnelle ou poursuite en Master/école d’ingénieur.
-
-
-
-J'ai opté pour le **BTS SIO** en spécialité **SLAM** pour approfondir mes compétences en développement d'applications.
+- Obtenir mon **BTS SIO** et valider mes compétences en développement informatique.  
+- Me spécialiser dans le domaine du **développement logiciel** ou du **web**.  
+- Poursuivre éventuellement vers une **licence professionnelle** ou une **école d’ingénieur** en informatique appliquée. 
