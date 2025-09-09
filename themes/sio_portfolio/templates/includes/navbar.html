@@ -19,7 +19,7 @@ _______________________________________________________________________________
             <!-- Eléments de navigation : -->
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <ul class="navbar-nav nav-underline ms-4 ms-md-0  mb-md-0 mt-4 mt-md-0 fw-bold">
+                <ul class="navbar-nav nav-underline mx-auto  mb-md-0 mt-4 mt-md-0 fw-bold">
                     {% for nom, url, icone, sousNav, description, couleur in MENUITEMS %}
                         <li class="nav-item {% if sousNav != None %}dropdown{% endif %}">
                             <a  class="nav-link py-0 {# active #} {% if sousNav != None %}dropdown-toggle{% endif %}"

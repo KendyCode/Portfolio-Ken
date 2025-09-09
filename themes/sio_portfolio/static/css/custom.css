@@ -24,8 +24,10 @@ ______________________________________________
     */
 
     /* --navbar-brand-couleur: rgb(255, 166, 0); */
-    --nav-link: white;
-    --nav-link-active: rgb(255, 209, 5);
+    --nav-link: #d0d6e2;
+    --nav-link-active: #9bb0d3;
+    --bs-warning: #6e7ca0;
+    --navbar-brand-couleur: #8a92b2;
 
 
     /* Redéfinition des couleurs de Bootstrap :*/
@@ -57,7 +59,7 @@ Définition du fond :
 --------------------
 */
 body {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.95));
+    background-image: linear-gradient(0deg, #1b1f3a, #2e2f4d);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*contain*/ 
@@ -76,7 +78,7 @@ Définition du fond du header :
 */
 
 .background-header {
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.95)), url('../backgrounds/header_background.png');
+    background-image: linear-gradient(0deg, #2e2f4d, #3a3b5f);;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*contain*/ 
@@ -120,10 +122,122 @@ Couleur des éléments de navigations :
 
 .dropdown-item:active {
     background-color: var(--navbar-brand-couleur);
-    color: white;
+    color: #e0e4f0
 }
 
 
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 1);
+}
+
+p {
+    color: #d0d6e2; /* texte principal */
+}
+
+p.secondary {
+    color: #a3abc1; /* texte secondaire */
+}
+
+p.accent {
+    color: #9bb0d3; /* texte pour citation ou accent */
+}
+
+h2, strong {
+    color: #9bb0d3;
+}
+
+.card-body {
+    color: #d0d6e2;
+    background-color: #2e2f4d; /* optionnel */
+}
+
+a.btn.btn-outline-warning {
+    color: #6e7ca0;
+    border-color: #6e7ca0;
+}
+
+a.btn.btn-outline-warning:hover {
+    color: #d0d6e2;
+    background-color: #6e7ca0;
+    border-color: #6e7ca0;
+}
+
+h5.card-title {
+    color: #a3abc1;
+}
+
+h1.m-0.p-0 {
+    color: #9bb0d3;
+}
+
+h1.m-0.p-0 {
+    color: #d0d6e2; /* titre principal, bleu-gris clair */
+}
+
+h1.h2 {
+    color: #9bb0d3; /* titre secondaire, bleu-violet */
+}
+
+/* Titres principaux */
+h1 {
+    color: #9bb0d3; /* bleu doux / violet */
+}
+
+/* Liste */
+li {
+    color: #d0d6e2; /* bleu-gris clair */
+}
+
+li:hover {
+    color: #6e7ca0; /* bleu-violet plus sombre à l'hover */
+}
+
+h3 {
+    color: #a3abc1; /* gris-bleu subtil */
+}
+
+h3:hover {
+    color: #9bb0d3; /* bleu-violet plus marqué */
+}
+
+/* Liste générale */
+li.list-group-item {
+    background-color: #2e2f4d;  /* gris-violet foncé, pour le fond */
+    color: #d0d6e2;             /* texte principal bleu-gris clair */
+    border-color: #3a3b5f;      /* bordure légèrement plus clair */
+}
+
+/* Lien à l'intérieur de la liste */
+li.list-group-item a {
+    color: #9bb0d3;             /* bleu doux / violet */
+    text-decoration: none;
+}
+
+/* Date ou texte secondaire */
+li.list-group-item small {
+    color: #a3abc1;             /* gris-bleu subtil */
+}
+
+p.text-muted {
+    color: #e719e7; /* gris-bleu subtil */
+}
+
+p.text-muted:hover {
+    color: #98d823; /* bleu-violet doux */
+}
+
+/* Texte secondaire dans un article */
+article p.text-muted {
+    color: #a3abc1 !important; /* gris-bleu subtil */
+}
+
+/* Les liens à l'intérieur du texte-muted */
+article p.text-muted a {
+    color: #9bb0d3 !important; /* bleu doux / violet pour les liens */
+    text-decoration: none;
+}
+
+article p.text-muted a:hover {
+    color: #d0d6e2 !important; /* bleu-gris clair au hover */
+    text-decoration: underline;
 }

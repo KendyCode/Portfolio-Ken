@@ -1,31 +1,37 @@
 Title: Engagement étudiant
 
-
 # 🤝 Engagement Étudiant
 
-## 🚒 Pompier volontaire
+## 💻 Bénévolat associatif – Ateliers Numériques
 
-En parallèle de mes études en BTS SIO, je suis **pompier volontaire** depuis 2 ans au sein du centre de secours de [VilleFictive].  
+_(engagement inventé)_
+
+En parallèle de mes études, je participe à une **association locale** qui propose des **ateliers numériques** destinés aux jeunes collégiens et lycéens.  
+L’objectif est de lutter contre la **fracture numérique** : même si cette génération est née avec un smartphone en main, beaucoup peinent à utiliser efficacement leur téléphone, et encore plus un ordinateur.
 
 ### Mes missions principales
-- Interventions de secours à personnes (accidents, urgences médicales).  
-- Lutte contre les incendies et protection des biens.  
-- Assistance en cas de catastrophes naturelles ou d’accidents de la route.  
-- Sensibilisation à la prévention des risques (auprès du grand public et des écoles).  
+
+- Accompagner des adolescents dans la découverte des outils numériques.
+- Expliquer les bases de la bureautique (Word, Excel, PowerPoint).
+- Initier à la recherche d’informations fiables sur Internet.
+- Sensibiliser à la **sécurité numérique** (mots de passe, arnaques en ligne, protection des données).
+- Aider à développer une **utilisation responsable** des réseaux sociaux.
 
 ### Compétences développées
-- **Rigueur et discipline** : respect strict des procédures de sécurité.  
-- **Gestion du stress** : réagir rapidement et efficacement en situation d’urgence.  
-- **Travail en équipe** : coordination avec d’autres pompiers, médecins, gendarmes.  
-- **Sens du service** : engagement au profit des autres et esprit de solidarité.  
-- **Organisation** : concilier études exigeantes et disponibilité opérationnelle.  
+
+- **Pédagogie** : vulgariser des notions techniques et s’adapter au niveau de chacun.
+- **Patience et écoute** : prendre le temps d’expliquer et rassurer les jeunes.
+- **Communication** : transmettre clairement des consignes et des savoirs.
+- **Responsabilisation** : sensibiliser aux bons usages du numérique.
 
 ### Ce que cela m’apporte dans mes études
-Être pompier volontaire m’aide à développer des **qualités humaines et professionnelles** utiles en informatique :  
-- La gestion des priorités et des imprévus.  
-- La capacité à travailler en **mode projet**, comme lors d’une intervention.  
-- L’esprit d’entraide et la communication claire, essentiels dans une équipe informatique.  
+
+Cet engagement m’aide à :
+
+- Approfondir mes propres compétences informatiques en les **enseignant aux autres**.
+- Développer une posture de **formateur** et de **médiateur numérique**.
+- Renforcer ma capacité à expliquer des concepts techniques en termes simples, utile en équipe projet ou lors de présentations.
 
 ---
 
-📌 *Mon engagement de pompier volontaire illustre ma motivation à mettre mes compétences au service des autres, que ce soit dans le cadre d’interventions d’urgence ou dans mes projets informatiques.*  
+📌 _Cet engagement illustre mon envie de rendre l’informatique plus accessible et de contribuer à réduire la fracture numérique chez les plus jeunes._
