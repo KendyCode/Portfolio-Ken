@@ -9,6 +9,6 @@ from pelicanconf import *
 
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = "https://github.com/KendyCode/Portfolio-Ken"
-RELATIVE_URLS = False
-DELETE_OUTPUT_DIRECTORY = True
+SITEURL = ''        # Pas de préfixe, tous les liens restent relatifs
+RELATIVE_URLS = True  # Les liens sont générés de manière relative
+DELETE_OUTPUT_DIRECTORY = True  # Supprime l'ancien dossier docs avant de générer

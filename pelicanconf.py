@@ -36,7 +36,7 @@ PAGE_PATHS = ['pages']          # Sous-dossier de PATH qui contient les pages st
 
 
 # Pour les fichiers statiques :
-STATIC_PATHS = []
+STATIC_PATHS = ["images"]
 
 # Dossier de sortie pour la publication :
 OUTPUT_PATH = 'docs'           # Attention, pour la publication sur GitHub Pages le dossier doit être "/docs"

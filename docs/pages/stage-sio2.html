@@ -172,13 +172,65 @@
 <p><strong><u>FICHE DESCRIPTIVE :</u></strong></p>
 <p><u><strong>Dates du stage :</strong></u></p>
 <ul>
-<li><strong>Date début :</strong> XX/01/2026</li>
-<li><strong>Date fin :</strong> XX/01/2026</li>
+<li><strong>Date début :</strong> Janv 01/012026</li>
+<li><strong>Date fin :</strong> 13/02/2026</li>
 </ul>
-<p><strong>Entreprise :</strong> Nom de l'entreprise</p>
+<p><strong>Entreprise :</strong> CEREEP-Ecotron IleDeFrance (CNRS)</p>
 </blockquote>
-<h1>Présentation de l'entreprise/société :</h1>
-<h1>Missions &amp; tâches réalisés :</h1>
+<h2>Présentation de l’entreprise / société</h2>
+<p><strong>CEREEP – Ecotron Île-de-France</strong> (Centre de Recherche en Écologie Expérimentale et Prédictive, UMS 3194) est une unité mixte de service portée par le CNRS, l’ENS-PSL et l’Université PSL, localisée à Saint-Pierre-lès-Nemours (Seine-et-Marne). Implantée sur un domaine de 78 ha, elle combine un bâtiment de recherche moderne, des espaces naturels, des capacités d'hébergement et plusieurs plateformes techniques au service de l’écologie expérimentale.</p>
+<h2>📑 Restitution de stage – Évolution et optimisation des outils</h2>
+<h2>🔬 Contexte du stage</h2>
+<p>Pour ce second stage, l'objectif était de faire évoluer les outils développés l'an dernier. Alors que le premier stage portait sur l'acquisition de données historiques via NASA POWER, ce nouveau projet visait à :</p>
+<ul>
+<li>Intégrer une nouvelle source de données plus précise et locale via Open-Meteo.</li>
+<li>Préparer le terrain pour la comparaison entre les prévisions météo et les capteurs réels des chambres climatiques (Ecorium).</li>
+<li>Optimiser l'architecture logicielle (API et Base de données) pour supporter ces nouvelles fonctionnalités.</li>
+</ul>
+<hr>
+<h2>🛰️ Programme 1 : Script Python – Migration vers l’API Open-Meteo</h2>
+<p>Le premier programme est une évolution majeure du script d'acquisition :</p>
+<ul>
+<li>Transition d'API : Passage de NASA POWER à Open-Meteo pour obtenir des données en temps réel et des prévisions plus précises.</li>
+<li>Mapping des variables : Identification et correspondance des paramètres météo standards (température, humidité, vent) avec les besoins spécifiques des scientifiques.</li>
+<li>Standardisation : Conservation du format CSV normalisé et du système d'UID unique (hash MD5) pour assurer la compatibilité avec l'API existante.</li>
+</ul>
+<p>👉 Difficulté : La compréhension des différents modèles de données météo et la sélection des paramètres pertinents parmi la vaste liste proposée par Open-Meteo.</p>
+<hr>
+<h2>🌐 Programme 2 : API Flask – Optimisation et nouvelles routes</h2>
+<p>Le deuxième programme a consisté à mettre à jour l'API REST pour gérer ces nouvelles données :</p>
+<ul>
+<li>Adaptation de la base de données : Modification des schémas SQLAlchemy pour inclure de nouveaux champs de métadonnées spécifiques à Open-Meteo.</li>
+<li>Amélioration des performances : Optimisation des requêtes pour filtrer les données plus rapidement, notamment lors de l'affichage de longues périodes.</li>
+<li>Étude de l'Ecorium : Analyse de la structure des logs de l'automate (SCADA) pour anticiper l'intégration future des mesures internes.</li>
+</ul>
+<p>👉 Note technique : Bien que l'intégration complète des données de l'Ecorium n'ait pas été finalisée en raison de la complexité des protocoles de l'automate, une étude structurelle a été réalisée pour permettre un futur couplage.</p>
+<hr>
+<h2>💻 Programme 3 : Interface Web – Comparaison et Visualisation</h2>
+<p>L'interface a été enrichie pour offrir plus de flexibilité aux utilisateurs :</p>
+<ul>
+<li>Dashboard amélioré : Ajout de fonctionnalités de filtrage avancées.</li>
+<li>Visualisation dynamique : Mise à jour des graphiques Chart.js pour permettre la superposition de données provenant de sources différentes.</li>
+<li>Interface d'upload : Simplification du processus d'importation des fichiers de métadonnées.</li>
+</ul>
+<hr>
+<h2>⚙️ Apprentissage et outils utilisés</h2>
+<ul>
+<li>API Open-Meteo : Apprentissage des requêtes sur une API de prévisions en temps réel.</li>
+<li>Python / Flask / SQLAlchemy : Approfondissement des compétences en maintenance évolutive de code existant.</li>
+<li>Analyse de données industrielles : Découverte des variables de supervision (tags) d'une chambre météorologique (Ecorium).</li>
+<li>Docker : Utilisation continue pour le déploiement et la gestion des environnements.</li>
+</ul>
+<hr>
+<h2>✅ Bilan personnel</h2>
+<p>Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, une situation très courante en entreprise.</p>
+<h3>Compétences acquises</h3>
+<ul>
+<li>Adaptabilité : Savoir modifier et améliorer un code que j'avais moi-même écrit un an plus tôt.</li>
+<li>Analyse technique : Savoir identifier les limites d'un système (comme la complexité de l'Ecorium) et se concentrer sur les priorités fonctionnelles.</li>
+<li>Expertise API : Maîtriser la transition entre deux fournisseurs de données différents tout en gardant une interface cohérente.</li>
+</ul>
+<p>👉 Ce stage confirme mon intérêt pour le développement "Full-Stack" et la gestion de données scientifiques, tout en m'ayant confronté aux réalités techniques des systèmes industriels complexes.</p>
     
     </main>
 
@@ -186,7 +238,7 @@
 
 
 <footer class="text-center mt-4 mb-0 bg-dark text-light">
-    <small>&copy; 2025 - Portfolio BTS SIO</small>
+    <small>&copy; 2026 - Portfolio BTS SIO</small>
 </footer>
     <script src="../theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../theme/js/custom.js"></script>

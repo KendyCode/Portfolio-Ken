@@ -168,12 +168,93 @@
         <!-- BLOCK POUR L'INSERTION DU CONTENU : -->
 
   <!-- <h1>Projets scolaires</h1> -->
-  <p>Voici quelques projets réalisés durant mes deux années :</p>
+  <h1>🎵 Projet : Music Ecom – Plateforme Hybride Discographique et E-Commerce</h1>
+<h2>1. 📖 Présentation Générale</h2>
+<p>Le projet <strong>Music Ecom</strong> est une application web complexe conçue pour répondre à un double besoin : la gestion précise d'une base de données discographique (crédits musicaux détaillés) et l'exploitation d'une boutique en ligne de supports physiques (Vinyles, CD).</p>
+<p>L'originalité du projet réside dans sa capacité à lier des entités techniques (beatmakers, ingénieurs du son) à des produits commerciaux, permettant une navigation transversale : l'utilisateur peut découvrir un album, consulter les crédits d'un morceau, puis acheter le vinyle correspondant.</p>
+<hr>
+<h2>2. 🏗️ Architecture Fonctionnelle</h2>
+<p>Le modèle de données s'articule autour de <strong>trois piliers majeurs</strong> :</p>
+<h3>A. 🎼 Le Noyau Musical (La "Discographie")</h3>
 <ul>
-<li>Application de gestion de stages en Python/Django</li>
-<li>API REST de gestion de séries avec Spring Boot</li>
-<li>Portfolio personnel avec Pelican</li>
+<li>
+<p><strong>Personne &amp; Role</strong> : Une gestion fine des intervenants. Au-delà de l'artiste principal, le système répertorie chaque contributeur (compositeur, mixeur, DA).</p>
+</li>
+<li>
+<p><strong>Track &amp; Project</strong> : Gestion des morceaux et des albums. Le système supporte les relations complexes comme les rééditions, les versions Deluxe ou les Remixes via une classe de relation dédiée entre projets.</p>
+</li>
+<li>
+<p><strong>Lien Personne-Track-Role</strong> : C'est le cœur du système, permettant de dater et de typer précisément chaque collaboration.</p>
+</li>
 </ul>
+<hr>
+<h3>B. 🛒 Le Pilier E-Commerce</h3>
+<ul>
+<li>
+<p><strong>Product</strong> : Fait le pont entre la musique et la vente. Un "Produit" est lié à un "Projet" musical.</p>
+</li>
+<li>
+<p><strong>Order &amp; LigneCommande</strong> : Gestion classique du tunnel d'achat et du panier.</p>
+</li>
+<li>
+<p><strong>User</strong> : Gestion des profils (Clients et Administrateurs).</p>
+</li>
+</ul>
+<hr>
+<h3>C. 🌐 La Dimension Communautaire</h3>
+<ul>
+<li><strong>Genre &amp; Commentaire</strong> : Organisation par styles musicaux et système d'avis pour renforcer l'engagement des utilisateurs.</li>
+</ul>
+<hr>
+<h2>3. ⚙️ Réalisation Technique (Méthodologie Agile)</h2>
+<p>Le développement a été segmenté en <strong>4 Sprints majeurs</strong>, utilisant les technologies <strong>Spring Boot (Kotlin), JPA/Hibernate et Thymeleaf</strong>.</p>
+<h3>🚀 Sprint 1 : Infrastructure et Socle MVC</h3>
+<p>Mise en place de l'environnement de développement sous <strong>IntelliJ IDEA</strong>. Configuration de la base de données <strong>MariaDB</strong> et structuration du projet selon le pattern <strong>MVC (Model-View-Controller)</strong>. Création des premières routes statiques et intégration des fragments (Header/Footer).</p>
+<hr>
+<h3>🗄️ Sprint 2 : Persistance et Back Office</h3>
+<p>Transformation du diagramme de classes en <strong>entités JPA</strong>.</p>
+<ul>
+<li>Mise en place des <strong>DAO (Data Access Objects)</strong> via <strong>JpaRepository</strong>.</li>
+<li>Développement d'un <strong>DataInitializer</strong> pour automatiser le remplissage de la base de données lors des tests.</li>
+<li>Création d'un <strong>Back Office complet (CRUD)</strong> permettant aux administrateurs de gérer les artistes, les pistes et les stocks de produits.</li>
+</ul>
+<hr>
+<h3>🔐 Sprint 3 : Sécurité et Contrôle d'Accès</h3>
+<p>Intégration de <strong>Spring Security</strong> pour sécuriser l'application.</p>
+<ul>
+<li>Gestion de l'authentification par <strong>email/mot de passe</strong> (hashé via <strong>BCrypt</strong>).</li>
+<li>Mise en place de <strong>rôles (USER / ADMIN)</strong> avec restrictions d'accès sur les routes sensibles (Dashboard admin).</li>
+<li>Personnalisation de l'expérience utilisateur (affichage dynamique de la navbar selon l'état de connexion).</li>
+</ul>
+<hr>
+<h3>💻 Sprint 4 : Front Office et Expérience Utilisateur</h3>
+<p>Développement de l'interface publique.</p>
+<ul>
+<li><strong>Navigation transverse</strong> : Possibilité de naviguer depuis un morceau vers la discographie complète d'un beatmaker.</li>
+<li><strong>Fiches techniques</strong> : Affichage détaillé des crédits musicaux.</li>
+<li><strong>Gestion du panier</strong> : Système de commande fonctionnel permettant l'achat de supports physiques.</li>
+</ul>
+<hr>
+<h2>4. 🧰 Stack Technique</h2>
+<ul>
+<li><strong>Langage :</strong> Kotlin / Java</li>
+<li><strong>Framework :</strong> Spring Boot (Web, Data JPA, Security)</li>
+<li><strong>Moteur de templates :</strong> Thymeleaf</li>
+<li><strong>Base de données :</strong> MariaDB</li>
+<li><strong>Outils :</strong> IntelliJ IDEA, Postman (tests d'API), Git.</li>
+</ul>
+<hr>
+<h2>5. 📊 Bilan du Projet</h2>
+<p>Ce projet m'a permis de maîtriser l'intégralité du <strong>cycle de vie d'une application web</strong>, de la modélisation conceptuelle à la mise en œuvre d'une interface utilisateur dynamique.</p>
+<p>La gestion des relations <strong>"plusieurs-à-plusieurs" (Many-to-Many)</strong> entre les personnes, les rôles et les morceaux a représenté le <strong>défi technique le plus formateur</strong>, offrant une précision de données comparable aux plateformes professionnelles du secteur musical.</p>
+<p><img alt="Texte alternatif de l'image" src="../images/diag.png">
+<img alt="Texte alternatif de l'image" src="../images/accueil_music.png">
+<img alt="Texte alternatif de l'image" src="../images/albums.png">
+<img alt="Texte alternatif de l'image" src="../images/artistes.png">
+<img alt="Texte alternatif de l'image" src="../images/feve.png">
+<img alt="Texte alternatif de l'image" src="../images/qalf.png">
+<img alt="Texte alternatif de l'image" src="../images/genre_crud_accueil.png">
+<img alt="Texte alternatif de l'image" src="../images/rap.png"></p>
     
     </main>
 
@@ -181,7 +262,7 @@
 
 
 <footer class="text-center mt-4 mb-0 bg-dark text-light">
-    <small>&copy; 2025 - Portfolio BTS SIO</small>
+    <small>&copy; 2026 - Portfolio BTS SIO</small>
 </footer>
     <script src="../theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../theme/js/custom.js"></script>

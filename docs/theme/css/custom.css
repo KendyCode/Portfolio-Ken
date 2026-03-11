@@ -134,3 +134,10 @@ article p.text-muted a:hover {
     color: var(--texte-principal) !important;
     text-decoration: underline;
 }
+
+img {
+    width: 40%;  /* L'image ne dépasse jamais du texte */
+    height: auto; /* Garde les proportions */
+    display: block;
+    margin: 0 auto;   /* Centre l'image */
+}
