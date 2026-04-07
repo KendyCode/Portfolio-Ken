@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP majeurs</title>
+    <title>TP majeurs AVCE</title>
     
     <!-- Favicons :-->
     <link rel="icon" type="image/png" sizes="16x16" href="../theme/logo/favicon-16x16.png">
@@ -167,10 +167,63 @@
     <main class="container mt-5 p-0 min-vh-100">
         <!-- BLOCK POUR L'INSERTION DU CONTENU : -->
 
-  <!-- <h1>TP majeurs</h1> -->
+  <!-- <h1>TP majeurs AVCE</h1> -->
   <h1>Présentation des travaux pratiques ou mini-projets :</h1>
 <h2>Première année de BTS SIO :</h2>
-<h2>TP Majeur – Recherche Films &amp; Acteurs avec API TMDb</h2>
+<h2>TP Majeurs SIO</h2>
+<blockquote>
+<p><strong><u>FICHE DESCRIPTIVE :</u></strong></p>
+<p><u><strong>Thème du TP :</strong></u></p>
+<ul>
+<li><strong>Sujet :</strong> Gestion d’une base de données de pays</li>
+<li><strong>Langage :</strong> PHP (PDO)</li>
+<li><strong>Base de données :</strong> MySQL (tables <code>Country</code>, <code>City</code>)</li>
+</ul>
+<p><strong>Objectif :</strong> Manipuler et afficher des données issues d’une base relationnelle via des pages PHP dynamiques.</p>
+</blockquote>
+<hr>
+<h2>Présentation du projet</h2>
+<p>Ce TP consiste à créer une application web en PHP permettant de :</p>
+<ul>
+<li>Récupérer et afficher la liste des <strong>continents</strong>,</li>
+<li>Lister les <strong>pays d’un continent</strong> sélectionné,</li>
+<li>Afficher leurs informations principales (nom, population, superficie, drapeau, capitale),</li>
+<li>Consulter les détails d’un pays en particulier,</li>
+<li>Mettre à jour certaines informations via un formulaire (ex. population, espérance de vie).</li>
+</ul>
+<hr>
+<h2>Organisation du code</h2>
+<h3>📌 1. Fichier <code>db.php</code></h3>
+<ul>
+<li>Fonction <code>getContinent()</code> → récupère la liste des continents distincts.</li>
+<li>Fonction <code>getCapitale($id)</code> → retourne le nom de la capitale d’un pays.</li>
+<li>Fonction <code>getPaysByName($name)</code> → retourne toutes les informations d’un pays donné.</li>
+</ul>
+<hr>
+<h3>📌 2. Fichier <code>index2.php</code></h3>
+<ul>
+<li>Vérifie la présence d’un paramètre <code>name</code> dans l’URL (<code>?name=Europe</code>).</li>
+<li>Si présent → affiche les pays du continent correspondant.</li>
+<li>Sinon → affiche tous les pays du monde.</li>
+<li>Pour chaque pays affiché :</li>
+<li>Drapeau (image construite à partir du code ISO à 2 lettres),</li>
+<li>Nom, population, superficie,</li>
+<li>Capitale (via la fonction <code>getCapitale</code>).</li>
+</ul>
+<hr>
+<h3>📌 3. Fichier <code>DetailsPays.php</code></h3>
+<ul>
+<li>Récupère le nom du pays passé en paramètre dans l’URL.</li>
+<li>Affiche toutes ses informations.</li>
+<li>Propose un <strong>formulaire de mise à jour</strong> (population, espérance de vie).</li>
+<li>Si le formulaire est soumis :</li>
+<li>Vérifie les champs remplis,</li>
+<li>Construit une requête SQL <code>UPDATE</code>,</li>
+<li>Met à jour les données dans la base,</li>
+<li>Affiche un message de succès ou d’erreur.</li>
+</ul>
+<hr>
+<h2>TP Majeurs – Recherche Films &amp; Acteurs avec API TMDb</h2>
 <blockquote>
 <p><strong><u>FICHE DESCRIPTIVE :</u></strong></p>
 <p><u><strong>Thème du TP :</strong></u></p>
@@ -190,7 +243,6 @@
 <li>Les données sont récupérées en <strong>GET</strong> (paramètre <code>query</code> dans l’URL).</li>
 <li>Les résultats sont affichés (affiches de films, images de profils des acteurs).</li>
 </ul>
-<p><img alt="Texte alternatif de l'image" src="../images/batman.jpg"></p>
 <hr>
 <h2>Concepts HTML utilisés</h2>
 <h3>1️⃣ Attributs d’un formulaire</h3>

@@ -91,6 +91,8 @@ Enfin, j’ai développé une **interface web** pour interagir graphiquement ave
 
 ---
 
+![Texte alternatif de l'image]({static}/images/dash_clim_1.jpg)
+
 ## ⚙️ Apprentissage et outils utilisés
 
 - **Flask** : création d’API REST et gestion des routes.

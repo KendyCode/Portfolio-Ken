@@ -136,7 +136,7 @@ article p.text-muted a:hover {
 }
 
 img {
-    width: 40%;  /* L'image ne dépasse jamais du texte */
+    width: 80%;  /* L'image ne dépasse jamais du texte */
     height: auto; /* Garde les proportions */
     display: block;
     margin: 0 auto;   /* Centre l'image */
