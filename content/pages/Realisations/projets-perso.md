@@ -1,6 +1,6 @@
 Title: Projets personnels
 
-
+[![GitHub](https://img.shields.io/badge/Code_Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KendyCode/simple_review_music)
 
 # 🎧 Projet : Music Log – Plateforme Interactive de Critiques Musicales
 

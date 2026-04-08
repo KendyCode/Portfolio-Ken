@@ -53,15 +53,20 @@
         </div>
 
         <div class="col-8 m-0 p-0 align-content-center text-center d-none d-md-block">
-            <!-- Titre principal : -->
             <h1 class="m-0 p-0 ">Portfolio BTS SIO SLAM</h1>
 
-
-            <!-- Titre secondaire : -->
-            <p class="m-0 p-0">
+            <p class="m-1 p-0">
                 <i>Mon parcours de formation</i>
             </p>
 
+            <div class="mt-2">
+                <a href="https://github.com/KendyCode" class="btn btn-outline-light btn-sm" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/kendy-milius/" class="btn btn-outline-info btn-sm" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
         </div>
     </div>
 
@@ -156,7 +161,8 @@
         <!-- BLOCK POUR L'INSERTION DU CONTENU : -->
 
   <!-- <h1>Stage SIO2</h1> -->
-  <blockquote>
+  <p><a href="https://github.com/KendyCode/climate_tp"><img alt="GitHub" src="https://img.shields.io/badge/Code_Source-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a></p>
+<blockquote>
 <p><u><strong>Dates du stage :</strong></u></p>
 <ul>
 <li><strong>Date début :</strong> Janv 01/012026</li>
@@ -172,23 +178,6 @@
 <p>Dans la continuité du premier stage au sein du <strong>CEREEP-Ecotron Île-de-France</strong>, ce second stage a été réalisé <strong>en duo</strong>. 
 L'objectif était de consolider, sécuriser et d'étendre les capacités du système de gestion des données climatiques précédemment développé.</p>
 <hr>
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../images/galleries_stage_2/7.png" class="d-block w-100" alt="Description 1">
-    </div>
-    <div class="carousel-item">
-      <img src="../images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </button>
-</div>
-
 <h2>🌍 Programme 1 : Migration stratégique et résilience des données</h2>
 <p>L'utilisation exclusive de l'API NASA POWER présentait un <strong>risque critique de dépendance</strong>.</p>
 <p>👉 <strong>Notre solution :</strong> Pour garantir la stabilité du projet, nous avons migré l'infrastructure vers <strong>Open-Meteo</strong>, un agrégateur européen souverain.
@@ -203,6 +192,23 @@ L'objectif était de consolider, sécuriser et d'étendre les capacités du syst
 <li><strong>Sélection Géographique Visuelle :</strong> Intégration d'une <strong>carte interactive</strong> permettant de choisir un point géographique et des dates d'un simple clic (finie la saisie manuelle de latitude/longitude).</li>
 <li><strong>Flexibilité de Stockage :</strong> Les chercheurs ont désormais le choix entre travailler en local ou déléguer totalement le stockage au serveur, libérant ainsi les ressources de leurs propres ordinateurs.</li>
 </ul>
+<div id="carousel_prog_1" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/galleries_stage_2/7.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_prog_1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel_prog_1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
 <hr>
 <h2>🧪 Programme 3 : Intelligence Mathématique et précision temporelle</h2>
 <p>Les API météo fournissent des données au format horaire, mais les automates des Ecolabs exigent une précision toutes les <strong>5 minutes</strong>.</p>
@@ -216,6 +222,32 @@ L'objectif était de consolider, sécuriser et d'étendre les capacités du syst
 <li><strong>Navigation par fragments (Pagination) :</strong> Pour maintenir une fluidité totale sur des graphiques contenant des centaines de milliers de points, l'affichage a été optimisé pour ne charger dynamiquement que les séquences utiles.</li>
 <li><strong>Arbitrage Technique :</strong> L'exportation au format <code>.xlsx</code> créait des goulots d'étranglement. Nous avons revu le pipeline pour privilégier des <strong>formats de sortie haute performance</strong> (S/o CSV), garantissant une rapidité de traitement de bout en bout.</li>
 </ul>
+<div id="carousel_prog_4" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/galleries_stage_2/ecolab_af2.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/galleries_stage_2/ex_new_csv_meteo.jpg" class="d-block w-100" alt="Description 2">
+    </div>
+<div class="carousel-item">
+      <img src="../images/galleries_stage_2/12.png" class="d-block w-100" alt="Description 2">
+    </div><div class="carousel-item">
+      <img src="../images/galleries_stage_2/13.png" class="d-block w-100" alt="Description 2">
+    </div><div class="carousel-item">
+      <img src="../images/galleries_stage_2/15.png" class="d-block w-100" alt="Description 2">
+    </div><div class="carousel-item">
+      <img src="../images/galleries_stage_2/14.png" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_prog_4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel_prog_4" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
 <hr>
 <h2>🛡️ Programme 5 : Sécurité et Innovation Scientifique</h2>
 <p>Le projet a pris une dimension critique nécessitant de nouvelles protections et des outils sur mesure pour la recherche :</p>
@@ -224,6 +256,22 @@ L'objectif était de consolider, sécuriser et d'étendre les capacités du syst
 <li><strong>Créateur de Climats Artificiels :</strong> À la demande des chercheurs, nous avons développé un éditeur de points interactif. Cet outil permet de <strong>"dessiner" manuellement des scénarios climatiques extrêmes</strong> ou futuristes qui n'existent pas encore dans la nature, ouvrant de nouvelles perspectives d'expérimentation pour le CNRS.</li>
 </ul>
 <hr>
+<div id="carousel_prog_5" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/galleries_stage_2/9.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/galleries_stage_2/10.png" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_prog_5" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel_prog_5" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
 <h2>✅ Bilan personnel</h2>
 <p>Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, tout en expérimentant la dynamique et les exigences du travail en binôme, une situation très courante en entreprise.</p>
 <h3>Compétences acquises</h3>
@@ -244,5 +292,6 @@ L'objectif était de consolider, sécuriser et d'étendre les capacités du syst
 </footer>
     <script src="../theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../theme/js/custom.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

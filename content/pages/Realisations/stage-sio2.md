@@ -2,7 +2,7 @@ Title: Stage SIO2
 
 
 
-
+[![GitHub](https://img.shields.io/badge/Code_Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KendyCode/climate_tp)
 
 > <u>**Dates du stage :**</u>
 >
@@ -28,23 +28,6 @@ L'objectif était de consolider, sécuriser et d'étendre les capacités du syst
 
 ---
 
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{static}/images/galleries_stage_2/7.png" class="d-block w-100" alt="Description 1">
-    </div>
-    <div class="carousel-item">
-      <img src="{static}/images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </button>
-</div>
-
 ## 🌍 Programme 1 : Migration stratégique et résilience des données
 
 L'utilisation exclusive de l'API NASA POWER présentait un **risque critique de dépendance**.
@@ -64,7 +47,26 @@ L'objectif de cette version était d'effacer totalement la barrière technique p
 - **Sélection Géographique Visuelle :** Intégration d'une **carte interactive** permettant de choisir un point géographique et des dates d'un simple clic (finie la saisie manuelle de latitude/longitude).
 - **Flexibilité de Stockage :** Les chercheurs ont désormais le choix entre travailler en local ou déléguer totalement le stockage au serveur, libérant ainsi les ressources de leurs propres ordinateurs.
 
+<div id="carousel_prog_1" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{static}/images/galleries_stage_2/7.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_prog_1" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel_prog_1" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
 ---
+
+
 
 ## 🧪 Programme 3 : Intelligence Mathématique et précision temporelle
 
@@ -83,6 +85,32 @@ L'augmentation de la précision des données (points toutes les 5 min) a provoqu
 - **Navigation par fragments (Pagination) :** Pour maintenir une fluidité totale sur des graphiques contenant des centaines de milliers de points, l'affichage a été optimisé pour ne charger dynamiquement que les séquences utiles.
 - **Arbitrage Technique :** L'exportation au format `.xlsx` créait des goulots d'étranglement. Nous avons revu le pipeline pour privilégier des **formats de sortie haute performance** (S/o CSV), garantissant une rapidité de traitement de bout en bout.
 
+<div id="carousel_prog_4" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{static}/images/galleries_stage_2/ecolab_af2.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/ex_new_csv_meteo.jpg" class="d-block w-100" alt="Description 2">
+    </div>
+<div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/12.png" class="d-block w-100" alt="Description 2">
+    </div><div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/13.png" class="d-block w-100" alt="Description 2">
+    </div><div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/15.png" class="d-block w-100" alt="Description 2">
+    </div><div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/14.png" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_prog_4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel_prog_4" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
 ---
 
 ## 🛡️ Programme 5 : Sécurité et Innovation Scientifique
@@ -93,6 +121,23 @@ Le projet a pris une dimension critique nécessitant de nouvelles protections et
 - **Créateur de Climats Artificiels :** À la demande des chercheurs, nous avons développé un éditeur de points interactif. Cet outil permet de **"dessiner" manuellement des scénarios climatiques extrêmes** ou futuristes qui n'existent pas encore dans la nature, ouvrant de nouvelles perspectives d'expérimentation pour le CNRS.
 
 ---
+
+<div id="carousel_prog_5" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{static}/images/galleries_stage_2/9.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/10.png" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_prog_5" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel_prog_5" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
 ## ✅ Bilan personnel
 
 Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, tout en expérimentant la dynamique et les exigences du travail en binôme, une situation très courante en entreprise.
