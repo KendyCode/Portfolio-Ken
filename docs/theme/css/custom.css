@@ -135,9 +135,20 @@ article p.text-muted a:hover {
     text-decoration: underline;
 }
 
-img {
-    width: 80%;  /* L'image ne dépasse jamais du texte */
-    height: auto; /* Garde les proportions */
+/*img {*/
+/*    width: 80%;  !* L'image ne dépasse jamais du texte *!*/
+/*    height: auto; !* Garde les proportions *!*/
+/*    display: block;*/
+/*    margin: 0 auto;   !* Centre l'image *!*/
+/*}*/
+
+.img-tp-majeur {
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     display: block;
-    margin: 0 auto;   /* Centre l'image */
+    margin: 0 auto;
+}
+
+#carouselExample .carousel-item:nth-child(1) img {
+    witdh: 400%;
 }

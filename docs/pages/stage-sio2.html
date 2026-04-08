@@ -122,12 +122,10 @@
                             </a>
                             
                                 <ul class="dropdown-menu bg-dark-subtle">
-                                        <li><a class="dropdown-item" href="../pages/tp-majeurs">TP majeurs</a></li>
+                                        <li><a class="dropdown-item" href="../pages/tp-majeur">TP majeur</a></li>
                                         <li><a class="dropdown-item" href="../pages/stage-sio1">Stage de 1ère année</a></li>
                                         <li><a class="dropdown-item" href="../pages/stage-sio2">Stage de 2e année</a></li>
-                                        <li><a class="dropdown-item" href="../pages/projets-scolaires">Projets scolaires</a></li>
                                         <li><a class="dropdown-item" href="../pages/projets-personnels">Projets personnels</a></li>
-                                        <li><a class="dropdown-item" href="../pages/certifications-complementaires">Certifications complémentaires</a></li>
                                 </ul> 
                         </li>
                         <li class="nav-item dropdown">
@@ -147,16 +145,6 @@
                                         <li><a class="dropdown-item" href="../tags">Liste des mots clés</a></li>
                                 </ul> 
                         </li>
-                        <li class="nav-item ">
-                            <a  class="nav-link py-0  "
-                                title="Présention de mon engagement étudiant."
-                                href="../pages/engagement-etudiant"
-                            >
-                            <i  class="bi bi-people-fill d-md-block text-md-center me-md-0 me-2 nav-link-icon"></i>
-                                Engagement
-                            </a>
-                            
-                        </li>
                 </ul>
             </div>
 
@@ -168,10 +156,7 @@
         <!-- BLOCK POUR L'INSERTION DU CONTENU : -->
 
   <!-- <h1>Stage SIO2</h1> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<blockquote>
-<p><strong><u>FICHE DESCRIPTIVE :</u></strong></p>
+  <blockquote>
 <p><u><strong>Dates du stage :</strong></u></p>
 <ul>
 <li><strong>Date début :</strong> Janv 01/012026</li>
@@ -184,11 +169,8 @@
 <h2>📑 Restitution de stage – Évolution et optimisation des outils</h2>
 <h2>🔬 Contexte du stage</h2>
 <p>Pour ce second stage, l'objectif était de faire évoluer les outils développés l'an dernier. Alors que le premier stage portait sur l'acquisition de données historiques via NASA POWER, ce nouveau projet visait à :</p>
-<ul>
-<li>Intégrer une nouvelle source de données plus précise et locale via Open-Meteo.</li>
-<li>Préparer le terrain pour la comparaison entre les prévisions météo et les capteurs réels des chambres climatiques (Ecorium).</li>
-<li>Optimiser l'architecture logicielle (API et Base de données) pour supporter ces nouvelles fonctionnalités.</li>
-</ul>
+<p>Dans la continuité du premier stage au sein du <strong>CEREEP-Ecotron Île-de-France</strong>, ce second stage a été réalisé <strong>en duo</strong>. 
+L'objectif était de consolider, sécuriser et d'étendre les capacités du système de gestion des données climatiques précédemment développé.</p>
 <hr>
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
   <div class="carousel-inner">
@@ -197,9 +179,6 @@
     </div>
     <div class="carousel-item">
       <img src="../images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
-    </div>
-    <div class="carousel-item">
-      <img src="../images/galleries_stage_2/9.png" class="d-block w-100" alt="Description 3">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -210,49 +189,50 @@
   </button>
 </div>
 
-<h2>🛰️ Programme 1 : Script Python – Migration vers l’API Open-Meteo</h2>
-<p>Le premier programme est une évolution majeure du script d'acquisition :</p>
-<ul>
-<li>Transition d'API : Passage de NASA POWER à Open-Meteo pour obtenir des données en temps réel et des prévisions plus précises.</li>
-<li>Mapping des variables : Identification et correspondance des paramètres météo standards (température, humidité, vent) avec les besoins spécifiques des scientifiques.</li>
-<li>Standardisation : Conservation du format CSV normalisé et du système d'UID unique (hash MD5) pour assurer la compatibilité avec l'API existante.</li>
-</ul>
-<p>👉 Difficulté : La compréhension des différents modèles de données météo et la sélection des paramètres pertinents parmi la vaste liste proposée par Open-Meteo.</p>
+<h2>🌍 Programme 1 : Migration stratégique et résilience des données</h2>
+<p>L'utilisation exclusive de l'API NASA POWER présentait un <strong>risque critique de dépendance</strong>.</p>
+<p>👉 <strong>Notre solution :</strong> Pour garantir la stabilité du projet, nous avons migré l'infrastructure vers <strong>Open-Meteo</strong>, un agrégateur européen souverain.
+- Centralisation des données issues des meilleurs instituts mondiaux (Météo-France, DWD allemand, ECMWF).
+- Remplacement d'une source unique par une <strong>solution multi-sources résiliente</strong>.
+- Garantie pour les chercheurs d'un accès permanent et performant.</p>
 <hr>
-<h2>🌐 Programme 2 : API Flask – Optimisation et nouvelles routes</h2>
-<p>Le deuxième programme a consisté à mettre à jour l'API REST pour gérer ces nouvelles données :</p>
+<h2>🗺️ Programme 2 : Interface Utilisateur "Zéro Code"</h2>
+<p>L'objectif de cette version était d'effacer totalement la barrière technique pour les chercheurs, en rendant l'outil parfaitement intuitif.</p>
+<h3>Fonctionnalités développées :</h3>
 <ul>
-<li>Adaptation de la base de données : Modification des schémas SQLAlchemy pour inclure de nouveaux champs de métadonnées spécifiques à Open-Meteo.</li>
-<li>Amélioration des performances : Optimisation des requêtes pour filtrer les données plus rapidement, notamment lors de l'affichage de longues périodes.</li>
-<li>Étude de l'Ecorium : Analyse de la structure des logs de l'automate (SCADA) pour anticiper l'intégration future des mesures internes.</li>
-</ul>
-<p>👉 Note technique : Bien que l'intégration complète des données de l'Ecorium n'ait pas été finalisée en raison de la complexité des protocoles de l'automate, une étude structurelle a été réalisée pour permettre un futur couplage.</p>
-<hr>
-<h2>💻 Programme 3 : Interface Web – Comparaison et Visualisation</h2>
-<p>L'interface a été enrichie pour offrir plus de flexibilité aux utilisateurs :</p>
-<ul>
-<li>Dashboard amélioré : Ajout de fonctionnalités de filtrage avancées.</li>
-<li>Visualisation dynamique : Mise à jour des graphiques Chart.js pour permettre la superposition de données provenant de sources différentes.</li>
-<li>Interface d'upload : Simplification du processus d'importation des fichiers de métadonnées.</li>
+<li><strong>Sélection Géographique Visuelle :</strong> Intégration d'une <strong>carte interactive</strong> permettant de choisir un point géographique et des dates d'un simple clic (finie la saisie manuelle de latitude/longitude).</li>
+<li><strong>Flexibilité de Stockage :</strong> Les chercheurs ont désormais le choix entre travailler en local ou déléguer totalement le stockage au serveur, libérant ainsi les ressources de leurs propres ordinateurs.</li>
 </ul>
 <hr>
-<h2>⚙️ Apprentissage et outils utilisés</h2>
+<h2>🧪 Programme 3 : Intelligence Mathématique et précision temporelle</h2>
+<p>Les API météo fournissent des données au format horaire, mais les automates des Ecolabs exigent une précision toutes les <strong>5 minutes</strong>.</p>
+<p>👉 Nous avons implémenté des <strong>algorithmes d'interpolation</strong> respectant la réalité physique de l'environnement :
+- <strong>Interpolation Linéaire :</strong> Utilisée pour calculer les variations fluides de température.
+- <strong>Interpolation PCHIP (Cubique) :</strong> Appliquée au rayonnement solaire afin de simuler une courbe de soleil réaliste et d'éviter les aberrations mathématiques.</p>
+<hr>
+<h2>⚡ Programme 4 : Optimisation des performances face au "Big Data"</h2>
+<p>L'augmentation de la précision des données (points toutes les 5 min) a provoqué une explosion du volume d'informations. Nous avons dû résoudre des problèmes d'optimisation lourds :</p>
 <ul>
-<li>API Open-Meteo : Apprentissage des requêtes sur une API de prévisions en temps réel.</li>
-<li>Python / Flask / SQLAlchemy : Approfondissement des compétences en maintenance évolutive de code existant.</li>
-<li>Analyse de données industrielles : Découverte des variables de supervision (tags) d'une chambre météorologique (Ecorium).</li>
-<li>Docker : Utilisation continue pour le déploiement et la gestion des environnements.</li>
+<li><strong>Navigation par fragments (Pagination) :</strong> Pour maintenir une fluidité totale sur des graphiques contenant des centaines de milliers de points, l'affichage a été optimisé pour ne charger dynamiquement que les séquences utiles.</li>
+<li><strong>Arbitrage Technique :</strong> L'exportation au format <code>.xlsx</code> créait des goulots d'étranglement. Nous avons revu le pipeline pour privilégier des <strong>formats de sortie haute performance</strong> (S/o CSV), garantissant une rapidité de traitement de bout en bout.</li>
+</ul>
+<hr>
+<h2>🛡️ Programme 5 : Sécurité et Innovation Scientifique</h2>
+<p>Le projet a pris une dimension critique nécessitant de nouvelles protections et des outils sur mesure pour la recherche :</p>
+<ul>
+<li><strong>Cybersécurité Renforcée :</strong> Suite à des tentatives d'intrusions sur le réseau du CNRS, nous avons blindé l'accès à la plateforme via la mise en place d'un système de <strong>clés API</strong> et d'une <strong>journalisation (logs) exhaustive</strong> de chaque action.</li>
+<li><strong>Créateur de Climats Artificiels :</strong> À la demande des chercheurs, nous avons développé un éditeur de points interactif. Cet outil permet de <strong>"dessiner" manuellement des scénarios climatiques extrêmes</strong> ou futuristes qui n'existent pas encore dans la nature, ouvrant de nouvelles perspectives d'expérimentation pour le CNRS.</li>
 </ul>
 <hr>
 <h2>✅ Bilan personnel</h2>
-<p>Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, une situation très courante en entreprise.</p>
+<p>Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, tout en expérimentant la dynamique et les exigences du travail en binôme, une situation très courante en entreprise.</p>
 <h3>Compétences acquises</h3>
 <ul>
-<li>Adaptabilité : Savoir modifier et améliorer un code que j'avais moi-même écrit un an plus tôt.</li>
-<li>Analyse technique : Savoir identifier les limites d'un système (comme la complexité de l'Ecorium) et se concentrer sur les priorités fonctionnelles.</li>
-<li>Expertise API : Maîtriser la transition entre deux fournisseurs de données différents tout en gardant une interface cohérente.</li>
+<li><strong>Adaptabilité :</strong> Savoir modifier et améliorer un code que j'avais moi-même écrit un an plus tôt.</li>
+<li><strong>Analyse technique :</strong> Savoir identifier les limites d'un système et se concentrer sur les priorités fonctionnelles.</li>
+<li><strong>Expertise API :</strong> Maîtriser la transition entre deux fournisseurs de données différents tout en gardant une interface cohérente.</li>
+<li><strong>Collaboration et Synergie (Travail en duo) :</strong> Apprendre à synchroniser le travail de développement à deux. Cette expérience m'a apporté une réelle rigueur dans la communication technique, la répartition efficace des tâches et la gestion partagée du projet. Elle m'a également prouvé l'importance de confronter ses idées pour résoudre des problèmes complexes plus rapidement.</li>
 </ul>
-<p>👉 Ce stage confirme mon intérêt pour le développement "Full-Stack" et la gestion de données scientifiques, tout en m'ayant confronté aux réalités techniques des systèmes industriels complexes.</p>
     
     </main>
 

@@ -1,9 +1,8 @@
 Title: Stage SIO2 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-> **<u>FICHE DESCRIPTIVE :</u>**
+
 
 > <u>**Dates du stage :**</u>
 >
@@ -23,9 +22,9 @@ Title: Stage SIO2
 
 Pour ce second stage, l'objectif était de faire évoluer les outils développés l'an dernier. Alors que le premier stage portait sur l'acquisition de données historiques via NASA POWER, ce nouveau projet visait à :
 
-- Intégrer une nouvelle source de données plus précise et locale via Open-Meteo.
-- Préparer le terrain pour la comparaison entre les prévisions météo et les capteurs réels des chambres climatiques (Ecorium).
-- Optimiser l'architecture logicielle (API et Base de données) pour supporter ces nouvelles fonctionnalités.
+Dans la continuité du premier stage au sein du **CEREEP-Ecotron Île-de-France**, ce second stage a été réalisé **en duo**. 
+L'objectif était de consolider, sécuriser et d'étendre les capacités du système de gestion des données climatiques précédemment développé.
+
 
 ---
 
@@ -37,9 +36,6 @@ Pour ce second stage, l'objectif était de faire évoluer les outils développé
     <div class="carousel-item">
       <img src="{static}/images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
     </div>
-    <div class="carousel-item">
-      <img src="{static}/images/galleries_stage_2/9.png" class="d-block w-100" alt="Description 3">
-    </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -49,57 +45,61 @@ Pour ce second stage, l'objectif était de faire évoluer les outils développé
   </button>
 </div>
 
-## 🛰️ Programme 1 : Script Python – Migration vers l’API Open-Meteo
+## 🌍 Programme 1 : Migration stratégique et résilience des données
 
-Le premier programme est une évolution majeure du script d'acquisition :
+L'utilisation exclusive de l'API NASA POWER présentait un **risque critique de dépendance**.
 
-- Transition d'API : Passage de NASA POWER à Open-Meteo pour obtenir des données en temps réel et des prévisions plus précises.
-- Mapping des variables : Identification et correspondance des paramètres météo standards (température, humidité, vent) avec les besoins spécifiques des scientifiques.
-- Standardisation : Conservation du format CSV normalisé et du système d'UID unique (hash MD5) pour assurer la compatibilité avec l'API existante.
-
-👉 Difficulté : La compréhension des différents modèles de données météo et la sélection des paramètres pertinents parmi la vaste liste proposée par Open-Meteo.
-
----
-
-## 🌐 Programme 2 : API Flask – Optimisation et nouvelles routes
-
-Le deuxième programme a consisté à mettre à jour l'API REST pour gérer ces nouvelles données :
-
-- Adaptation de la base de données : Modification des schémas SQLAlchemy pour inclure de nouveaux champs de métadonnées spécifiques à Open-Meteo.
-- Amélioration des performances : Optimisation des requêtes pour filtrer les données plus rapidement, notamment lors de l'affichage de longues périodes.
-- Étude de l'Ecorium : Analyse de la structure des logs de l'automate (SCADA) pour anticiper l'intégration future des mesures internes.
-
-👉 Note technique : Bien que l'intégration complète des données de l'Ecorium n'ait pas été finalisée en raison de la complexité des protocoles de l'automate, une étude structurelle a été réalisée pour permettre un futur couplage.
+👉 **Notre solution :** Pour garantir la stabilité du projet, nous avons migré l'infrastructure vers **Open-Meteo**, un agrégateur européen souverain.
+- Centralisation des données issues des meilleurs instituts mondiaux (Météo-France, DWD allemand, ECMWF).
+- Remplacement d'une source unique par une **solution multi-sources résiliente**.
+- Garantie pour les chercheurs d'un accès permanent et performant.
 
 ---
 
-## 💻 Programme 3 : Interface Web – Comparaison et Visualisation
+## 🗺️ Programme 2 : Interface Utilisateur "Zéro Code"
 
-L'interface a été enrichie pour offrir plus de flexibilité aux utilisateurs :
+L'objectif de cette version était d'effacer totalement la barrière technique pour les chercheurs, en rendant l'outil parfaitement intuitif.
 
-- Dashboard amélioré : Ajout de fonctionnalités de filtrage avancées.
-- Visualisation dynamique : Mise à jour des graphiques Chart.js pour permettre la superposition de données provenant de sources différentes.
-- Interface d'upload : Simplification du processus d'importation des fichiers de métadonnées.
-
----
-
-## ⚙️ Apprentissage et outils utilisés
-
-- API Open-Meteo : Apprentissage des requêtes sur une API de prévisions en temps réel.
-- Python / Flask / SQLAlchemy : Approfondissement des compétences en maintenance évolutive de code existant.
-- Analyse de données industrielles : Découverte des variables de supervision (tags) d'une chambre météorologique (Ecorium).
-- Docker : Utilisation continue pour le déploiement et la gestion des environnements.
+### Fonctionnalités développées :
+- **Sélection Géographique Visuelle :** Intégration d'une **carte interactive** permettant de choisir un point géographique et des dates d'un simple clic (finie la saisie manuelle de latitude/longitude).
+- **Flexibilité de Stockage :** Les chercheurs ont désormais le choix entre travailler en local ou déléguer totalement le stockage au serveur, libérant ainsi les ressources de leurs propres ordinateurs.
 
 ---
 
+## 🧪 Programme 3 : Intelligence Mathématique et précision temporelle
+
+Les API météo fournissent des données au format horaire, mais les automates des Ecolabs exigent une précision toutes les **5 minutes**.
+
+👉 Nous avons implémenté des **algorithmes d'interpolation** respectant la réalité physique de l'environnement :
+- **Interpolation Linéaire :** Utilisée pour calculer les variations fluides de température.
+- **Interpolation PCHIP (Cubique) :** Appliquée au rayonnement solaire afin de simuler une courbe de soleil réaliste et d'éviter les aberrations mathématiques.
+
+---
+
+## ⚡ Programme 4 : Optimisation des performances face au "Big Data"
+
+L'augmentation de la précision des données (points toutes les 5 min) a provoqué une explosion du volume d'informations. Nous avons dû résoudre des problèmes d'optimisation lourds :
+
+- **Navigation par fragments (Pagination) :** Pour maintenir une fluidité totale sur des graphiques contenant des centaines de milliers de points, l'affichage a été optimisé pour ne charger dynamiquement que les séquences utiles.
+- **Arbitrage Technique :** L'exportation au format `.xlsx` créait des goulots d'étranglement. Nous avons revu le pipeline pour privilégier des **formats de sortie haute performance** (S/o CSV), garantissant une rapidité de traitement de bout en bout.
+
+---
+
+## 🛡️ Programme 5 : Sécurité et Innovation Scientifique
+
+Le projet a pris une dimension critique nécessitant de nouvelles protections et des outils sur mesure pour la recherche :
+
+- **Cybersécurité Renforcée :** Suite à des tentatives d'intrusions sur le réseau du CNRS, nous avons blindé l'accès à la plateforme via la mise en place d'un système de **clés API** et d'une **journalisation (logs) exhaustive** de chaque action.
+- **Créateur de Climats Artificiels :** À la demande des chercheurs, nous avons développé un éditeur de points interactif. Cet outil permet de **"dessiner" manuellement des scénarios climatiques extrêmes** ou futuristes qui n'existent pas encore dans la nature, ouvrant de nouvelles perspectives d'expérimentation pour le CNRS.
+
+---
 ## ✅ Bilan personnel
 
-Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, une situation très courante en entreprise.
+Ce stage de deuxième année m'a permis de travailler sur la maintenance et l'évolution d'un projet réel, tout en expérimentant la dynamique et les exigences du travail en binôme, une situation très courante en entreprise.
 
 ### Compétences acquises
 
-- Adaptabilité : Savoir modifier et améliorer un code que j'avais moi-même écrit un an plus tôt.
-- Analyse technique : Savoir identifier les limites d'un système (comme la complexité de l'Ecorium) et se concentrer sur les priorités fonctionnelles.
-- Expertise API : Maîtriser la transition entre deux fournisseurs de données différents tout en gardant une interface cohérente.
-
-👉 Ce stage confirme mon intérêt pour le développement "Full-Stack" et la gestion de données scientifiques, tout en m'ayant confronté aux réalités techniques des systèmes industriels complexes.
+- **Adaptabilité :** Savoir modifier et améliorer un code que j'avais moi-même écrit un an plus tôt.
+- **Analyse technique :** Savoir identifier les limites d'un système et se concentrer sur les priorités fonctionnelles.
+- **Expertise API :** Maîtriser la transition entre deux fournisseurs de données différents tout en gardant une interface cohérente.
+- **Collaboration et Synergie (Travail en duo) :** Apprendre à synchroniser le travail de développement à deux. Cette expérience m'a apporté une réelle rigueur dans la communication technique, la répartition efficace des tâches et la gestion partagée du projet. Elle m'a également prouvé l'importance de confronter ses idées pour résoudre des problèmes complexes plus rapidement.

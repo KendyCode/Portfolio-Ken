@@ -1,6 +1,6 @@
-Title: TP majeurs 
+Title: TP majeur
 
-# Présentation des travaux pratiques ou mini-projets :
+
 
 ## Première année de BTS SIO :
 
@@ -27,7 +27,7 @@ Ce TP combine **formulaires HTML** et **appel à une API externe** afin de réal
 - Les données sont récupérées en **GET** (paramètre `query` dans l’URL).
 - Les résultats sont affichés (affiches de films, images de profils des acteurs).
 
-![Texte alternatif de l'image]({static}/images/batman.jpg)
+![Texte alternatif de l'image]({static}/images/batman.jpg){: .img-tp-majeur }
 
 ---
 
