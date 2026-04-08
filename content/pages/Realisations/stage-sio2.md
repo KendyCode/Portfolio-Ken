@@ -1,5 +1,8 @@
 Title: Stage SIO2 
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 > **<u>FICHE DESCRIPTIVE :</u>**
 
 > <u>**Dates du stage :**</u>
@@ -8,6 +11,7 @@ Title: Stage SIO2
 > - **Date fin :** 13/02/2026
 >
 > **Entreprise :** CEREEP-Ecotron IleDeFrance (CNRS)
+
 
 ## Présentation de l’entreprise / société
 
@@ -24,6 +28,26 @@ Pour ce second stage, l'objectif était de faire évoluer les outils développé
 - Optimiser l'architecture logicielle (API et Base de données) pour supporter ces nouvelles fonctionnalités.
 
 ---
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{static}/images/galleries_stage_2/7.png" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/8.png" class="d-block w-100" alt="Description 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_2/9.png" class="d-block w-100" alt="Description 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
 
 ## 🛰️ Programme 1 : Script Python – Migration vers l’API Open-Meteo
 

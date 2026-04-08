@@ -12,6 +12,22 @@
       {% endfor %}
     {% endif %}
   </p>
+  {% if article.source %}
+  <div class="article-source mb-3">
+    <ul class="list-unstyled ms-3 mb-0">
+      {% for src in article.source.split(',') %}
+      {% set clean_url = src | trim %}
+      {% if clean_url %}
+      <li>
+        <a href="{{ clean_url }}" target="_blank" rel="noopener noreferrer" class="text-break">
+          {{ clean_url }}
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
   <hr>
 

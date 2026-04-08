@@ -168,12 +168,82 @@
         <!-- BLOCK POUR L'INSERTION DU CONTENU : -->
 
   <!-- <h1>Projets personnels</h1> -->
-  <p>Voici quelques projets réalisés durant mes deux années :</p>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<h1>🎧 Projet : Music Log – Plateforme Interactive de Critiques Musicales</h1>
+<h2>1. 📖 Présentation Générale</h2>
+<p>Le projet <strong>Music Log</strong> est une application web interactive conçue comme un "SensCritique" ou "Letterboxd" de la musique. Elle permet aux passionnés de rechercher des morceaux et de partager leurs critiques (notes et commentaires).</p>
+<p>L'originalité et la force majeure de ce projet résident dans son <strong>interconnexion avec l'API publique de Deezer</strong>. Au lieu de stocker et de gérer manuellement un catalogue statique exhaustif, l'application agit comme une surcouche sociale intelligente sur le catalogue mondial de Deezer, combinant ainsi l'infinité d'une API externe avec la précision d'une base de données relationnelle locale.</p>
+<hr>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/galleries_projet_perso_1/simple_search_music.jpg" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/galleries_projet_perso_1/dashboard_music_log.jpg" class="d-block w-100" alt="Description 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+<h2>2. 🏗️ Architecture Fonctionnelle</h2>
+<p>Le système repose sur une logique hybride innovante, structurée autour de <strong>trois piliers principaux</strong> :</p>
+<h3>A. 🔄 L'Interconnexion Deezer et la Logique de Surcouche</h3>
 <ul>
-<li>Application de gestion de stages en Python/Django</li>
-<li>API REST de gestion de séries avec Spring Boot</li>
-<li>Portfolio personnel avec Pelican</li>
+<li><strong>Priorité aux données locales (Override) :</strong> Lors d'une recherche, le système interroge l'API Deezer. Cependant, avant l'affichage, il vérifie si le <code>deezer_id</code> existe dans la base locale (<code>Track.query.filter_by(deezer_id=...)</code>). Si oui, les informations stockées en local écrasent celles de l'API. Cela permet à la modération de corriger des métadonnées ou de personnaliser l'affichage.</li>
+<li><strong>Ajout Administrateur (Pré-remplissage) :</strong> L'ajout manuel d'une piste par un admin nécessite un <code>deezer_id</code> existant. Cela sert à "pré-enregistrer" ou "modifier en avance" l'apparence d'un morceau de Deezer sur Music Log, garantissant le bon fonctionnement du système de notation basé sur les appels API de cet ID.</li>
 </ul>
+<hr>
+<h3>B. 🗄️ Le Modèle de Données (Base de données locale)</h3>
+<p>Le projet s'articule autour de trois tables principales (<code>models.py</code>) :</p>
+<ul>
+<li><strong>User (Utilisateur) :</strong> Sauvegarde le nom d'utilisateur, l'email, le mot de passe hashé, ainsi qu'un flag <code>is_admin</code> pour la gestion des droits.</li>
+<li><strong>Track (Morceau) :</strong> Enregistre les informations essentielles (identifiant Deezer, titre, artiste, pochette). <strong>Logique de cache intelligente :</strong> un morceau n'est inséré en BDD que lorsqu'un utilisateur décide de laisser un avis dessus pour la première fois.</li>
+<li><strong>Review (Avis) :</strong> Contient la note (sur 5), le texte du commentaire et la date. Relié par clés étrangères à l'utilisateur (<code>user_id</code>) et au morceau (<code>track_id</code>).</li>
+</ul>
+<hr>
+<h3>C. 👥 Les Espaces et Fonctionnalités</h3>
+<ul>
+<li><strong>Recherche et Consultation :</strong> Accès public à la recherche (via API en direct) et aux pages détails des morceaux avec extrait audio et avis de la communauté.</li>
+<li><strong>Espace Utilisateur :</strong> Inscription/Connexion pour rédiger, consulter, éditer ou supprimer ses propres critiques.</li>
+<li><strong>Dashboard Administrateur :</strong> Espace restreint pour visualiser l'ensemble des données, ajouter/modifier/supprimer des musiques (avec suppression en cascade des avis) et modérer les commentaires des utilisateurs.</li>
+</ul>
+<hr>
+<h2>3. ⚙️ Réalisation Technique</h2>
+<p>Le développement a couvert l'ensemble des couches de l'application, du front-end à la consommation d'API.</p>
+<h3>🌐 Consommation d'API REST</h3>
+<p>Utilisation de la bibliothèque Python <code>requests</code> pour interroger dynamiquement l'API de Deezer (api.deezer.com) pour la recherche et la récupération des détails des morceaux.</p>
+<h3>💾 Back-end &amp; Persistance</h3>
+<p>Création des contrôleurs avec <strong>Flask</strong> et modélisation via l'ORM <strong>SQLAlchemy</strong>. Optimisation de la base de données locale MySQL pour limiter le stockage aux seuls morceaux critiqués (mise en cache).</p>
+<h3>🔐 Sécurité et Contrôle d'Accès (RBAC)</h3>
+<ul>
+<li>Implémentation de la gestion des droits via des décorateurs (<code>@login_required</code>, <code>@admin_required</code>) pour séparer les rôles (visiteurs, utilisateurs, admin).</li>
+<li>Chiffrement sécurisé des mots de passe via <strong>Werkzeug</strong>.</li>
+<li>Protections contre les failles CSRF assurées par <strong>Flask-WTF</strong>.</li>
+</ul>
+<h3>💻 Front-end et Interface</h3>
+<p>Conception d'interfaces web dynamiques en utilisant le moteur de templating <strong>Jinja2</strong> couplé à <strong>HTML5/CSS3</strong> pour le rendu visuel.</p>
+<hr>
+<h2>4. 🧰 Stack Technique</h2>
+<ul>
+<li><strong>Langages :</strong> Python 3, SQL, HTML5, CSS3</li>
+<li><strong>Framework &amp; Backend :</strong> Flask, Werkzeug WSGI</li>
+<li><strong>ORM &amp; BDD :</strong> SQLAlchemy, MySQL</li>
+<li><strong>Templating &amp; Formulaires :</strong> Jinja2, Flask-WTF</li>
+<li><strong>Authentification :</strong> Flask-Login</li>
+<li><strong>Outils &amp; IDE :</strong> IntelliJ IDEA</li>
+<li><strong>Services Externes :</strong> API REST Deezer</li>
+</ul>
+<hr>
+<h2>5. 📊 Bilan du Projet</h2>
+<p>Ce projet a permis de concevoir une application web complète, fonctionnelle et sécurisée en Python.</p>
+<p>Le <strong>défi technique majeur</strong> a résidé dans la synchronisation fluide entre une base de données relationnelle locale et une API externe asynchrone. La mise en place de la logique d'"override" et du stockage différé (lazy saving) a permis de créer une plateforme légère, capable de proposer un catalogue musical quasi infini tout en conservant le contrôle administratif sur les données affichées.</p>
     
     </main>
 

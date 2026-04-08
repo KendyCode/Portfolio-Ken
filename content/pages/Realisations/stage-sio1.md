@@ -1,5 +1,7 @@
 Title: Stage SIO1
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 > **<u>FICHE DESCRIPTIVE :</u>**
 
 > <u>**Dates du stage :**</u>
@@ -39,6 +41,24 @@ Ils m’ont demandé de développer un ensemble d’outils pour :
 - Concevoir un **site web** permettant de visualiser les données sous forme de graphiques interactifs.
 
 ---
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{static}/images/galleries_stage_1/dash_clim_1.jpg" class="d-block w-100" alt="Description 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_1/ex_ancien_csv_meteo.jpg" class="d-block w-100" alt="Description 2">
+    </div>
+ 
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
 
 ## 🛰️ Programme 1 : Script Python – récupération et formatage des données NASA POWER
 
@@ -91,7 +111,6 @@ Enfin, j’ai développé une **interface web** pour interagir graphiquement ave
 
 ---
 
-![Texte alternatif de l'image]({static}/images/dash_clim_1.jpg)
 
 ## ⚙️ Apprentissage et outils utilisés
 
