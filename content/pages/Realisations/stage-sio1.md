@@ -45,10 +45,13 @@ Ils m’ont demandé de développer un ensemble d’outils pour :
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{static}/images/galleries_stage_1/dash_clim_1.jpg" class="d-block w-100" alt="Description 1">
+      <img src="{static}/images/galleries_stage_1/ex_requete_nasa.jpg" class="d-block w-100" alt="Description 1">
     </div>
     <div class="carousel-item">
       <img src="{static}/images/galleries_stage_1/ex_ancien_csv_meteo.jpg" class="d-block w-100" alt="Description 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{static}/images/galleries_stage_1/dash_clim_1.jpg" class="d-block w-100" alt="Description 2">
     </div>
  
   </div>
